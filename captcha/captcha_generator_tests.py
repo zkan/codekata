@@ -1,5 +1,6 @@
 from mock import MagicMock
 import unittest
+import random
 
 from captcha_generator import CaptchaGenerator
 
@@ -9,24 +10,30 @@ class CaptchaGeneratorTests(unittest.TestCase):
         self.captchaGenerator = CaptchaGenerator()
 
     def test_first_operand_should_be_in_range_one_to_nine(self):
+        random.randrange = MagicMock()
+
         first_operand = self.captchaGenerator.get_first_operand()
 
-        self.assertTrue(0 < first_operand <= 9)
+        random.randrange.assert_call_once_with(1, 10)
 
     def test_second_operand_should_be_in_one_to_nine_list(self):
-        second_operand = self.captchaGenerator.get_second_operand()
+        random.choice = MagicMock()
 
         one_to_nine_list = [
             'one', 'two', 'three', 'four', 'five',
             'six', 'seven', 'eight', 'nine'
         ]
+        second_operand = self.captchaGenerator.get_second_operand()
 
-        self.assertTrue(second_operand in one_to_nine_list)
+        random.choice.assert_call_once_with(one_to_nine_list)
 
     def test_operator_should_be_plus_or_minus_sign(self):
+        random.choice = MagicMock()
+
+        operators = ['+', '-']
         operator = self.captchaGenerator.get_operator()
 
-        self.assertTrue(operator == '+' or operator == '-')
+        random.choice.assert_call_once_with(operators)
 
     def test_1_plus_one_should_equal_2(self):
         self.captchaGenerator.get_first_operand = MagicMock()
