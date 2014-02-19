@@ -10,6 +10,12 @@ class RomanTests(unittest.TestCase):
 
         self.assertEqual('I', result)
 
+    def test_input_2_should_return_II(self):
+        roman = Roman()
+        result = roman.convert(2)
 
-if __name__ == "__main__":
+        self.assertEqual('II', result)
+
+
+if __name__ == '__main__':
     unittest.main()
