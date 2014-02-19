@@ -29,18 +29,18 @@ class CaptchaGeneratorTests(unittest.TestCase):
         self.assertTrue(operator == '+' or operator == '-')
 
     def test_1_plus_one_should_equal_2(self):
-        CaptchaGenerator.get_first_operand = MagicMock()
-        CaptchaGenerator.get_first_operand.return_value = 1
+        self.captchaGenerator.get_first_operand = MagicMock()
+        self.captchaGenerator.get_first_operand.return_value = 1
 
-        CaptchaGenerator.get_second_operand = MagicMock()
-        CaptchaGenerator.get_second_operand.return_value = 'one'
+        self.captchaGenerator.get_second_operand = MagicMock()
+        self.captchaGenerator.get_second_operand.return_value = 'one'
 
-        CaptchaGenerator.get_operator = MagicMock()
-        CaptchaGenerator.get_operator.return_value = '+'
+        self.captchaGenerator.get_operator = MagicMock()
+        self.captchaGenerator.get_operator.return_value = '+'
 
-        first_operand = CaptchaGenerator.get_first_operand()
-        operator = CaptchaGenerator.get_operator()
-        second_operand = CaptchaGenerator.get_second_operand()
+        first_operand = self.captchaGenerator.get_first_operand()
+        operator = self.captchaGenerator.get_operator()
+        second_operand = self.captchaGenerator.get_second_operand()
 
         result = self.captchaGenerator.getCaptcha(
             first_operand,
@@ -51,18 +51,18 @@ class CaptchaGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 2)
 
     def test_9_minus_five_should_equal_4(self):
-        CaptchaGenerator.get_first_operand = MagicMock()
-        CaptchaGenerator.get_first_operand.return_value = 9
+        self.captchaGenerator.get_first_operand = MagicMock()
+        self.captchaGenerator.get_first_operand.return_value = 9
 
-        CaptchaGenerator.get_second_operand = MagicMock()
-        CaptchaGenerator.get_second_operand.return_value = 'five'
+        self.captchaGenerator.get_second_operand = MagicMock()
+        self.captchaGenerator.get_second_operand.return_value = 'five'
 
-        CaptchaGenerator.get_operator = MagicMock()
-        CaptchaGenerator.get_operator.return_value = '-'
+        self.captchaGenerator.get_operator = MagicMock()
+        self.captchaGenerator.get_operator.return_value = '-'
 
-        first_operand = CaptchaGenerator.get_first_operand()
-        operator = CaptchaGenerator.get_operator()
-        second_operand = CaptchaGenerator.get_second_operand()
+        first_operand = self.captchaGenerator.get_first_operand()
+        operator = self.captchaGenerator.get_operator()
+        second_operand = self.captchaGenerator.get_second_operand()
 
         result = self.captchaGenerator.getCaptcha(
             first_operand,
@@ -73,18 +73,18 @@ class CaptchaGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 4)
 
     def test_1_minus_three_should_equal_minus_2(self):
-        CaptchaGenerator.get_first_operand = MagicMock()
-        CaptchaGenerator.get_first_operand.return_value = 1
+        self.captchaGenerator.get_first_operand = MagicMock()
+        self.captchaGenerator.get_first_operand.return_value = 1
 
-        CaptchaGenerator.get_second_operand = MagicMock()
-        CaptchaGenerator.get_second_operand.return_value = 'three'
+        self.captchaGenerator.get_second_operand = MagicMock()
+        self.captchaGenerator.get_second_operand.return_value = 'three'
 
-        CaptchaGenerator.get_operator = MagicMock()
-        CaptchaGenerator.get_operator.return_value = '-'
+        self.captchaGenerator.get_operator = MagicMock()
+        self.captchaGenerator.get_operator.return_value = '-'
 
-        first_operand = CaptchaGenerator.get_first_operand()
-        operator = CaptchaGenerator.get_operator()
-        second_operand = CaptchaGenerator.get_second_operand()
+        first_operand = self.captchaGenerator.get_first_operand()
+        operator = self.captchaGenerator.get_operator()
+        second_operand = self.captchaGenerator.get_second_operand()
 
         result = self.captchaGenerator.getCaptcha(
             first_operand,
