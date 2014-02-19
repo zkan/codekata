@@ -9,7 +9,12 @@ class CaptchaGenerator:
         return random.choice(['+', '-'])
 
     def get_second_operand(self):
-        return random.choice(['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'])
+        one_to_nine_list = [
+            'one', 'two', 'three', 'four', 'five',
+            'six', 'seven', 'eight', 'nine'
+        ]
+
+        return random.choice(one_to_nine_list)
 
     def getCaptcha(self, first_operand, operator, second_operand):
         map_string_to_number = {

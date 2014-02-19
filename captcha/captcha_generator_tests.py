@@ -16,7 +16,10 @@ class CaptchaGeneratorTests(unittest.TestCase):
     def test_second_operand_should_be_in_one_to_nine_list(self):
         second_operand = self.captchaGenerator.get_second_operand()
 
-        one_to_nine_list = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+        one_to_nine_list = [
+            'one', 'two', 'three', 'four', 'five',
+            'six', 'seven', 'eight', 'nine'
+        ]
 
         self.assertTrue(second_operand in one_to_nine_list)
 
@@ -92,5 +95,5 @@ class CaptchaGeneratorTests(unittest.TestCase):
         self.assertEqual(result, -2)
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     unittest.main()
