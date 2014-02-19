@@ -42,10 +42,15 @@ class RomanTests(unittest.TestCase):
 
         self.assertEqual('VII', result)
 
-    def test_input_7_should_return_VII(self):
+    def test_input_8_should_return_VIII(self):
         result = self.roman.convert(8)
 
         self.assertEqual('VIII', result)
+
+    def test_input_9_should_return_IX(self):
+        result = self.roman.convert(9)
+
+        self.assertEqual('IX', result)
 
 
 if __name__ == '__main__':

@@ -12,12 +12,14 @@ class Roman():
                     return 'II'
                 elif remainder_after_mod_5 == 3:
                     return 'III'
-                elif remainder_after_mod_5 == 4:
+                else:
                     return 'IV'
             else:
                 if remainder_after_mod_5 == 1:
                     return 'VI'
                 elif remainder_after_mod_5 == 2:
                     return 'VII'
-                else:
+                elif remainder_after_mod_5 == 3:
                     return 'VIII'
+                else:
+                    return 'IX'
