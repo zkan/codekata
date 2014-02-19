@@ -6,7 +6,9 @@ class CaptchaGenerator:
         return random.randrange(1, 10)
 
     def get_operator(self):
-        return random.choice(['+', '-'])
+        operators = ['+', '-']
+
+        return random.choice(operators)
 
     def get_second_operand(self):
         one_to_nine_list = [
