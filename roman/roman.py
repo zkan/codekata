@@ -15,4 +15,7 @@ class Roman():
                 elif remainder_after_mod_5 == 4:
                     return 'IV'
             else:
-                return 'VI'
+                if remainder_after_mod_5 == 1:
+                    return 'VI'
+                else:
+                    return 'VII'
