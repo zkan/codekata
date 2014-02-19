@@ -32,6 +32,11 @@ class RomanTests(unittest.TestCase):
 
         self.assertEqual('V', result)
 
+    def test_input_6_should_return_VI(self):
+        result = self.roman.convert(6)
+
+        self.assertEqual('VI', result)
+
 
 if __name__ == '__main__':
     unittest.main()
