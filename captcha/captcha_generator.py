@@ -30,8 +30,9 @@ class CaptchaGenerator:
             'eight': 8,
             'nine': 9
         }
+        second_operand = map_string_to_number[second_operand]
 
         if operator == '+':
-            return first_operand + map_string_to_number[second_operand]
+            return first_operand + second_operand
         else:
-            return first_operand - map_string_to_number[second_operand]
+            return first_operand - second_operand
