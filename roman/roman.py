@@ -1,8 +1,11 @@
 class Roman():
     def convert(self, number):
+        remainder_after_mod_10 = number % 10
         remainder_after_mod_5 = number % 5
 
-        if remainder_after_mod_5 == 0:
+        if remainder_after_mod_10 == 0:
+            return 'X'
+        elif remainder_after_mod_5 == 0:
             return 'V'
         else:
             if number < 5:
