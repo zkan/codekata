@@ -2,5 +2,9 @@ class Roman():
     def convert(self, number):
         if number == 1:
             return 'I'
-        else:
+        elif number == 2:
             return 'II'
+        elif number == 3:
+            return 'III'
+        else:
+            return 'IV'

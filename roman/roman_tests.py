@@ -16,6 +16,18 @@ class RomanTests(unittest.TestCase):
 
         self.assertEqual('II', result)
 
+    def test_input_3_should_return_III(self):
+        roman = Roman()
+        result = roman.convert(3)
+
+        self.assertEqual('III', result)
+
+    def test_input_4_should_return_IV(self):
+        roman = Roman()
+        result = roman.convert(4)
+
+        self.assertEqual('IV', result)
+
 
 if __name__ == '__main__':
     unittest.main()
