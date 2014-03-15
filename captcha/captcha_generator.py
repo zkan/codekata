@@ -12,8 +12,9 @@ class CaptchaGenerator:
 
     def get_second_operand(self):
         one_to_nine_list = [
-            'one', 'two', 'three', 'four', 'five',
-            'six', 'seven', 'eight', 'nine'
+            'one', 'two', 'three',
+            'four', 'five', 'six',
+            'seven', 'eight', 'nine'
         ]
 
         return random.choice(one_to_nine_list)
