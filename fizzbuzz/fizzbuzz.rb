@@ -1,6 +1,6 @@
 class FizzBuzz
     def take(num)
-        if num == 15
+        if num % 3 == 0 and num % 5 == 0
             "FizzBuzz"
         elsif num % 3 == 0
             "Fizz"
