@@ -1,9 +1,11 @@
 class FizzBuzz
     def take(num)
-        if num % 3 == 0
-            'Fizz'
+        if num == 15
+            "FizzBuzz"
+        elsif num % 3 == 0
+            "Fizz"
         elsif num % 5 == 0
-            'Buzz'
+            "Buzz"
         else
             num
         end

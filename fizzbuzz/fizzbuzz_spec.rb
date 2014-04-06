@@ -42,5 +42,11 @@ describe FizzBuzz do
         result = fizzbuzz.take(10)
         result.should eq("Buzz")
     end
+
+    it "returns FizzBuzz if input 15" do
+        fizzbuzz = FizzBuzz.new
+        result = fizzbuzz.take(15)
+        result.should eq("FizzBuzz")
+    end
 end
 
