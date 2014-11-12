@@ -35,7 +35,7 @@ class FizzBuzz:
 
         result = is_fizz[number % 3 == 0]
         result += is_buzz[number % 5 == 0]
-        result += str(is_number[number % 3 != 0 and number % 5 != 0])
+        result += str(is_number[number % 3 != 0 and number % 7 != 0])
 
         return result
 
