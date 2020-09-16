@@ -15,7 +15,7 @@ def count_alphabets(sentence):
 
 def is_pangram(sentence):
     alphabet_count = count_alphabets(sentence)
-    return len(alphabet_count)
+    return len(alphabet_count) == 26
 
 
 class TestPangram(unittest.TestCase):
@@ -58,6 +58,11 @@ class TestPangram(unittest.TestCase):
     def test_sentence_should_be_pangram(self):
         result = is_pangram(self.sentence)
         self.assertTrue(result)
+
+    def test_not_pangram_sentence_should_not_be_pangram(self):
+        sentence = 'Hello World'
+        result = is_pangram(sentence)
+        self.assertFalse(result)
 
 
 if __name__ == '__main__':
