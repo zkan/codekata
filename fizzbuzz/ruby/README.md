@@ -1,9 +1,13 @@
 # Ruby
 
+Set up:
+
 ```bash
 bundle install
 ```
 
+Run tests:
+
 ```bash
-bundle exec rspec
+make test
 ```
