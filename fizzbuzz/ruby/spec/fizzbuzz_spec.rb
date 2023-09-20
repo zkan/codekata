@@ -18,4 +18,14 @@ RSpec.describe FizzBuzz do
       expect(fizzbuzz.say(6)).to eq("Fizz")
     end
   end
+
+  describe "Buzz" do
+    it "says Buzz when input is 5" do
+      expect(fizzbuzz.say(5)).to eq("Buzz")
+    end
+
+    it "says Buzz when input is 10" do
+      expect(fizzbuzz.say(10)).to eq("Buzz")
+    end
+  end
 end
