@@ -38,4 +38,14 @@ RSpec.describe FizzBuzz do
       expect(fizzbuzz.say(30)).to eq("FizzBuzz")
     end
   end
+
+  describe "Number" do
+    it "says 2 when input is 2" do
+      expect(fizzbuzz.say(2)).to eq(2)
+    end
+
+    it "says 7 when input is 7" do
+      expect(fizzbuzz.say(7)).to eq(7)
+    end
+  end
 end
