@@ -28,4 +28,14 @@ RSpec.describe FizzBuzz do
       expect(fizzbuzz.say(10)).to eq("Buzz")
     end
   end
+
+  describe "FizzBuzz" do
+    it "says FizzBuzz when input is 15" do
+      expect(fizzbuzz.say(15)).to eq("FizzBuzz")
+    end
+
+    it "says FizzBuzz when input is 30" do
+      expect(fizzbuzz.say(30)).to eq("FizzBuzz")
+    end
+  end
 end
